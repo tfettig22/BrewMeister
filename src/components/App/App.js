@@ -5,6 +5,8 @@ import Header from '../Header/Header';
 import Filter from '../Filter/Filter';
 import BeerCards from '../BeerCards/BeerCards';
 import BeerOfTheDay from '../BeerOfTheDay/BeerOfTheDay';
+import BeerInfo from '../BeerInfo/BeerInfo';
+import SaveRecipe from '../SaveRecipe/SaveRecipe';
 import { getBeerData, getRandomBeer } from '../../api-calls';
 
 function App() {
@@ -33,19 +35,24 @@ function App() {
       <Routes>
         <Route path ='/' element={
           <>
-            <Filter filterBeer={filterBeer}/>
+            <Filter filterBeer={filterBeer} />
             <BeerOfTheDay randomBeer={randomBeer} />
           </>
         }/>
-        <Route path='/filtered-beers' element={
+        <Route path='/beers' element={
           <>
-            <Filter filterBeer={filterBeer}/>
+            <Filter filterBeer={filterBeer} />
             <BeerCards beers={beers} />
           </>
         }/>
-        <Route path='/beer-details' element={
+        <Route path='/beer-details/:id' element={
           <>
-            <h2>Beer Details page</h2>
+            <BeerInfo />
+          </>
+        }/>
+        <Route path='/save-this-beer/:id' element={
+          <>
+            <SaveRecipe />
           </>
         }/>
         <Route path='/saved-beers' element={

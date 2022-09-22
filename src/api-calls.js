@@ -18,4 +18,14 @@ const getRandomBeer = () => {
     });
 }
 
-export { getBeerData, getRandomBeer };
+const getSingleBeer = (id) => {
+  return fetch(`https://api.punkapi.com/v2/beers/${id}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Sorry, we could not find that beer');
+      }
+      return response.json();
+    });
+}
+
+export { getBeerData, getRandomBeer, getSingleBeer };

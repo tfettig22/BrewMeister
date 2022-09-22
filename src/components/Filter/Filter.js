@@ -14,7 +14,7 @@ const Filter = ({ filterBeer }) => {
     setFilterType('');
     setFilterInput('');
     setPlaceholder('');
-    navigate('/filtered-beers');
+    navigate('/beers');
   }
 
   useEffect(() => {
