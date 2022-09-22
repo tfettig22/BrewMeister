@@ -6,11 +6,11 @@ const Header = () => {
   const navigate = useNavigate();
 
   const goHome = () => {
-    navigate('/')
+    navigate('/');
   }
 
   const goToSavedBeers = () => {
-    navigate('/saved-beers')
+    navigate('/saved-beers');
   }
 
   return (
@@ -19,7 +19,7 @@ const Header = () => {
       <h1 className='brewmeister'>BrewMeister</h1>
       <button className='saved-beers-button' onClick={() => goToSavedBeers()}>Saved Beers</button>
     </div>
-  )
+  );
 }
 
 export default Header;

@@ -25,7 +25,7 @@ const Filter = ({ filterBeer }) => {
     } else if (filterType.includes('ibu')) {
       setPlaceholder('e.g. 50');
     }
-  }, [filterType])
+  }, [filterType]);
 
   return (
     <form className='filter-form' onSubmit={(event) => handleSubmit(event)}>
@@ -49,7 +49,7 @@ const Filter = ({ filterBeer }) => {
 
       <button className='submit-filter' type='submit'>Filter</button>
     </form>
-  )
+  );
 }
 
 export default Filter;

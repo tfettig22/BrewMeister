@@ -2,8 +2,13 @@ import React from 'react';
 import './BeerCards.css';
 import { useNavigate } from 'react-router-dom';
 
-const BeerCards = ({ beers }) => {
+const BeerCards = ({ beers, getSelectedBeer }) => {
   const navigate = useNavigate();
+
+  const selectABeer = (beer) => {
+    navigate(`/beer-details/${beer.id}`);
+    getSelectedBeer(beer.id);
+  }
 
   let beerCards;
   if (beers.length > 0) {
@@ -13,15 +18,15 @@ const BeerCards = ({ beers }) => {
           <p>{beer.name}</p>
           <p>{beer.tagline}</p>
           <p>{`ABV: ${beer.abv} IBU: ${beer.ibu}`}</p>
-          <button onClick={() => navigate(`/beer-details/${beer.id}`)}>Brew Me!</button>
+          <button onClick={() => selectABeer(beer)}>Brew Me!</button>
         </div>
-      )
-    })
+      );
+    });
   }
 
   return (
     <div className='beer-cards-container'>{beerCards}</div>
-  )
+  );
 }
 
 export default BeerCards;

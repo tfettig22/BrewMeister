@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getSingleBeer } from '../../api-calls';
 
 const BeerInfo = () => {
-  const [selectedBeer, setSelectedBeer] = useState({})
+  const [selectedBeer, setSelectedBeer] = useState({});
   const [hops, setHops] = useState([]);
   const [malts, setMalts] = useState([]);
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const BeerInfo = () => {
     let maltCounter = 100;
     getSingleBeer(id)
       .then(data => {
-        setSelectedBeer(data[0])
+        setSelectedBeer(data[0]);
         setHops(data[0].ingredients.hops.map(hop => {
           hopCounter++
           return (
@@ -23,18 +23,18 @@ const BeerInfo = () => {
               <p>{`${hop.name} - ${hop.amount.value} ${hop.amount.unit}`}</p>
               <p>{`When to add: ${hop.add}`}</p>
             </div>
-          )
-        }))
+          );
+        }));
         setMalts(data[0].ingredients.malt.map(malt => {
           maltCounter++
           return (
             <div key={`${maltCounter}`}>
               <p>{`${malt.name} - ${malt.amount.value} ${malt.amount.unit}`}</p>
             </div>
-          )
-        }))
-      })
-  }, [id])
+          );
+        }));
+      });
+  }, [id]);
 
     return (
       <section>
@@ -53,7 +53,7 @@ const BeerInfo = () => {
         <p>{selectedBeer.brewers_tips}</p>
         <button onClick={() => navigate(`/save-this-beer/${selectedBeer.id}`)}>Save this recipe</button>
       </section>
-    )
+    );
 }
 
 export default BeerInfo;

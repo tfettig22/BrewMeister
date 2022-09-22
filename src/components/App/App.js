@@ -7,26 +7,33 @@ import BeerCards from '../BeerCards/BeerCards';
 import BeerOfTheDay from '../BeerOfTheDay/BeerOfTheDay';
 import BeerInfo from '../BeerInfo/BeerInfo';
 import SaveRecipe from '../SaveRecipe/SaveRecipe';
-import { getBeerData, getRandomBeer } from '../../api-calls';
+import { getBeerData, getRandomBeer, getSingleBeer } from '../../api-calls';
 
 function App() {
-  const [randomBeer, setRandomBeer] = useState([])
-  const [beers, setBeers] = useState([])
+  const [randomBeer, setRandomBeer] = useState([]);
+  const [beers, setBeers] = useState([]);
+  const [selectedBeer, setSelectedBeer] = useState({});
 
   const filterBeer = (method, value) => {
     getBeerData(method, value).then(data => {
-      setBeers(data)
+      setBeers(data);
     })
   }
 
   const getBeerOfTheDay = () => {
     getRandomBeer().then(data => {
-      setRandomBeer(data)
+      setRandomBeer(data);
+    })
+  }
+
+  const getSelectedBeer = (id) => {
+    getSingleBeer(id).then(data => {
+      setSelectedBeer(data[0]);
     })
   }
 
   useEffect(() => {
-    getBeerOfTheDay()
+    getBeerOfTheDay();
   }, [])
 
   return (
@@ -36,13 +43,13 @@ function App() {
         <Route path ='/' element={
           <>
             <Filter filterBeer={filterBeer} />
-            <BeerOfTheDay randomBeer={randomBeer} />
+            <BeerOfTheDay randomBeer={randomBeer} getSelectedBeer={getSelectedBeer} />
           </>
         }/>
         <Route path='/beers' element={
           <>
             <Filter filterBeer={filterBeer} />
-            <BeerCards beers={beers} />
+            <BeerCards beers={beers} getSelectedBeer={getSelectedBeer} />
           </>
         }/>
         <Route path='/beer-details/:id' element={
@@ -52,7 +59,7 @@ function App() {
         }/>
         <Route path='/save-this-beer/:id' element={
           <>
-            <SaveRecipe />
+            <SaveRecipe selectedBeer={selectedBeer} getSelectedBeer={getSelectedBeer} />
           </>
         }/>
         <Route path='/saved-beers' element={
