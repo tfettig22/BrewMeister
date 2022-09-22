@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './SaveRecipe.css';
 import { useNavigate, useParams } from 'react-router-dom';
+import { postBeer } from '../../api-calls';
 
 const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
   const [notes, setNotes] = useState('');
@@ -10,7 +11,14 @@ const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //post recipe
+    postBeer({
+      beerID: selectedBeer.id,
+      name: selectedBeer.name,
+      tagline: selectedBeer.tagline,
+      abv: selectedBeer.abv,
+      ibu: selectedBeer.ibu,
+      notes: notes
+    })
     navigate('/saved-beers');
   }
 
