@@ -8,4 +8,14 @@ const getBeerData = (method, value) => {
     });
 }
 
-export { getBeerData };
+const getRandomBeer = () => {
+  return fetch('https://api.punkapi.com/v2/beers/random')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Sorry, there was an error retrieving the beer data');
+      }
+      return response.json();
+    });
+}
+
+export { getBeerData, getRandomBeer };

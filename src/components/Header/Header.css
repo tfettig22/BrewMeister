@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10%;
+  border-bottom: 1px solid black;
+}
+
+.home-button,
+.saved-beers-button {
+  height: 50%;
+  width: 10%;
+  border-radius: 20px;
+}

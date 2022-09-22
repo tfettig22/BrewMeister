@@ -1,16 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Filter.css';
+import { useNavigate } from 'react-router-dom';
 
 const Filter = ({ filterBeer }) => {
   const [filterType, setFilterType] = useState('');
   const [filterInput, setFilterInput] = useState('');
+  const [placeholder, setPlaceholder] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     filterBeer(filterType, filterInput);
     setFilterType('');
     setFilterInput('');
+    setPlaceholder('');
+    navigate('/filtered-beers');
   }
+
+  useEffect(() => {
+    if (filterType === 'beer_name') {
+      setPlaceholder('e.g. Stout');
+    } else if (filterType.includes('abv')) {
+      setPlaceholder('e.g. 7.5');
+    } else if (filterType.includes('ibu')) {
+      setPlaceholder('e.g. 50');
+    }
+  }, [filterType])
 
   return (
     <form className='filter-form' onSubmit={(event) => handleSubmit(event)}>
@@ -27,7 +42,7 @@ const Filter = ({ filterBeer }) => {
         className='filter-input'
         type='text'
         name='filterInput'
-        placeholder='Name/Keyword - or - Number of ABV/IBU'
+        placeholder={placeholder || ''}
         value={filterInput}
         onChange={(event) => setFilterInput(event.target.value)}
       />
