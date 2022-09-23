@@ -7,6 +7,7 @@ import BeerCards from '../BeerCards/BeerCards';
 import BeerOfTheDay from '../BeerOfTheDay/BeerOfTheDay';
 import BeerInfo from '../BeerInfo/BeerInfo';
 import SaveRecipe from '../SaveRecipe/SaveRecipe';
+import SavedBeers from '../SavedBeers/SavedBeers';
 import { getBeerData, getRandomBeer, getSingleBeer } from '../../api-calls';
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
         }/>
         <Route path='/saved-beers' element={
           <>
-            <h3>Saved Beers page</h3>
+            <SavedBeers />
           </>
         }/>
       </Routes>

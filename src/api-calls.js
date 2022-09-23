@@ -28,4 +28,30 @@ const getSingleBeer = (id) => {
     });
 }
 
-export { getBeerData, getRandomBeer, getSingleBeer };
+const postBeer = (body) => {
+  return fetch('http://localhost:3002/beers', {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  })
+  .then(response => {
+    if(!response.ok) {
+      throw new Error('Sorry, there was an error posting your information');
+    }
+    return response.json();
+  });
+}
+
+const getSavedBeers = () => {
+  return fetch('http://localhost:3002/beers')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Sorry, there was an error retrieving the beer data');
+      }
+      return response.json();
+    });
+}
+
+export { getBeerData, getRandomBeer, getSingleBeer, postBeer, getSavedBeers };
