@@ -6,9 +6,21 @@
   border-bottom: 1px solid black;
 }
 
+.brewmeister {
+  font-size: 3em;
+}
+
 .home-button,
 .saved-beers-button {
   height: 50%;
   width: 10%;
+  font-size: 1.2em;
   border-radius: 20px;
+  background-color: rgba(86, 212, 86, 0.6);
+  transition: .2s ease-in;
+}
+
+.home-button:hover,
+.saved-beers-button:hover {
+  background-color:rgba(86, 212, 86, 1);
 }

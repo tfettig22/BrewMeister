@@ -28,26 +28,31 @@ const Filter = ({ filterBeer }) => {
   }, [filterType]);
 
   return (
-    <form className='filter-form' onSubmit={(event) => handleSubmit(event)}>
-      <select className='filter-type' value={filterType} onChange={(event) => setFilterType(event.target.value)}>
-        <option value='none' hidden>Select an option</option>
-        <option value='beer_name'>Name/Keyword</option>
-        <option value='abv_gt'>ABV greater than:</option>
-        <option value='abv_lt'>ABV less than:</option>
-        <option value='ibu_gt'>IBU greater than:</option>
-        <option value='ibu_lt'>IBU less than:</option>
-      </select>
+    <form className='filter-form' id='filter-form' onSubmit={(event) => handleSubmit(event)}>
+      <label className='label' htmlFor='filter-form'>What kind of beer are you looking for?</label>
+      <div className='select-and-input'>
+        <select className='filter-type' value={filterType} onChange={(event) => setFilterType(event.target.value)}>
+          <option value='none' hidden>Select an option</option>
+          <option value='beer_name'>Name/Keyword</option>
+          <option value='abv_gt'>ABV greater than:</option>
+          <option value='abv_lt'>ABV less than:</option>
+          <option value='ibu_gt'>IBU greater than:</option>
+          <option value='ibu_lt'>IBU less than:</option>
+        </select>
 
-      <input
-        className='filter-input'
-        type='text'
-        name='filterInput'
-        placeholder={placeholder || ''}
-        value={filterInput}
-        onChange={(event) => setFilterInput(event.target.value)}
-      />
+        <input
+          className='filter-input'
+          type='text'
+          name='filterInput'
+          placeholder={placeholder || ''}
+          value={filterInput}
+          onChange={(event) => setFilterInput(event.target.value)}
+        />
 
-      <button className='submit-filter' type='submit'>Filter</button>
+        <div className='submit-button-container'>
+          <button className='submit-filter' type='submit' hidden={!filterType || !filterInput}>Filter</button>
+        </div>
+      </div>
     </form>
   );
 }

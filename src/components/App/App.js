@@ -11,7 +11,7 @@ import SavedBeers from '../SavedBeers/SavedBeers';
 import { getBeerData, getRandomBeer, getSingleBeer } from '../../api-calls';
 
 function App() {
-  const [randomBeer, setRandomBeer] = useState([]);
+  const [randomBeer, setRandomBeer] = useState({});
   const [beers, setBeers] = useState([]);
   const [selectedBeer, setSelectedBeer] = useState({});
 
@@ -23,7 +23,7 @@ function App() {
 
   const getBeerOfTheDay = () => {
     getRandomBeer().then(data => {
-      setRandomBeer(data);
+      setRandomBeer(data[0]);
     })
   }
 
