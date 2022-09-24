@@ -21,7 +21,7 @@ const BeerOfTheDay = ({ randomBeer, getSelectedBeer }) => {
           <img className='botd-image' src={randomBeer.image} alt='beer of the day'></img>
           <div className='botd-info'>
             <p className='botd-name'>{randomBeer.name}</p>
-            <p>{randomBeer.tagline}</p>
+            <p className='botd-tagline'>{randomBeer.tagline}</p>
             <p className='botd-description'>{randomBeer.description}</p>
             <p>{`ABV: ${randomBeer.abv} IBU: ${randomBeer.ibu}`}</p>
             <button className='botd-button' onClick={() => selectABeer(randomBeer)}>Brew Me!</button>

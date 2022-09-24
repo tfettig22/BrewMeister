@@ -17,7 +17,7 @@ const Header = () => {
     <div className='header'>
       <button className='home-button' onClick={() => goHome()}>Home</button>
       <h1 className='brewmeister'>BrewMeister</h1>
-      <button className='saved-beers-button' onClick={() => goToSavedBeers()}>Saved Beers</button>
+      <button className='saved-beers-button' onClick={() => goToSavedBeers()}>Favorite Beers</button>
     </div>
   );
 }

@@ -15,7 +15,7 @@ const assignImage = (beer) => {
 }
 
 const determineColor = (beer, name, tagline, description) => {
-  if (name.includes('stout') || name.includes('porter') || name.includes('black') || name.includes('dark') || tagline.includes('stout') || tagline.includes('porter') || tagline.includes('black') || tagline.includes('dark') || description.includes('stout') || description.includes('porter') || description.includes('black') || description.includes('dark')) {
+  if (name.includes('stout') || name.includes('porter') || name.includes('black') || tagline.includes('stout') || tagline.includes('porter') || tagline.includes('black') || description.includes('stout') || description.includes('porter') || description.includes('black')) {
     beer['image'] = stout;
   } else if (name.includes('red') || name.includes('scotch') || name.includes('strong') || name.includes('amber') || name.includes('dogma') || name.includes('wine')|| tagline.includes('red') || tagline.includes('scotch') || tagline.includes('strong') || tagline.includes('amber') || tagline.includes('wine') || description.includes('red') || description.includes('scotch') || description.includes('strong') || description.includes('amber')) {
     beer['image'] = red;

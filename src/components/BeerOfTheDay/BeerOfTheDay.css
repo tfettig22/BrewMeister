@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   height: 80%;
+  width: 100%;
   background-color: rgba(230, 221, 56, 0.5);
 }
 

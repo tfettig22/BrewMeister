@@ -1,3 +1,14 @@
 .app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
+}
+
+.header-and-filter {
+  height: 20%;
+  width: 100%;
+  background-image: url('../../assets/hop-banner.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
