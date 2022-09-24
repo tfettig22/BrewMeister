@@ -29,7 +29,7 @@ const getSingleBeer = (id) => {
 }
 
 const postBeer = (body) => {
-  return fetch('http://localhost:3002/beers', {
+  return fetch('https://brew-meister-api.herokuapp.com/beers', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -45,7 +45,7 @@ const postBeer = (body) => {
 }
 
 const getSavedBeers = () => {
-  return fetch('http://localhost:3002/beers')
+  return fetch('https://brew-meister-api.herokuapp.com/beers')
     .then(response => {
       if (!response.ok) {
         throw new Error('Sorry, there was an error retrieving the beer data');
