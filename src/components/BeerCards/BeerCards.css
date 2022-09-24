@@ -30,16 +30,11 @@
   align-items: center;
   text-align: center;
   height: 35%;
-  width: 85%;
+  width: 70%;
   margin-top: 1%;
   border: 2px groove grey;
   border-radius: 10px;
   background-color: white;
-  transition: .2s;
-}
-
-.beer-card:hover {
-  transform: scale(1.02)
 }
 
 .card-info-container {
@@ -67,10 +62,10 @@
   height: 30%;
   width: 10%;
   border-radius: 20px;
-  background-color: rgba(86, 212, 86, 0.6);
+  background-color: rgba(86, 212, 86);
   transition: .2s ease-in;
 }
 
 .card-button:hover {
-  background-color:rgba(86, 212, 86, 1);
+  transform: scale(1.1);
 }

@@ -73,7 +73,7 @@ const BeerInfo = () => {
           </div>
           <div className='description-and-tips-container'>
             <p className='info-description'>{selectedBeer.description}</p>
-            <p className='info-brewers-tips'>{selectedBeer.brewers_tips}</p>
+            <p className='info-brewers-tips'>Brewing tips: {selectedBeer.brewers_tips}</p>
           </div>
         </div>
       </section>

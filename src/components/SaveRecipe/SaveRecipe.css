@@ -1,0 +1,75 @@
+ .save-a-beer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+  background-color: rgba(230, 221, 56, 0.5);
+ }
+
+ .save-beer-card {
+  display: flex;
+  height: 30%;
+  width: 60%;
+  margin: 5% 0% 3% 0%;
+  border: 2px groove grey;
+  border-radius: 10px;
+  background-color: white;
+ }
+
+ .save-beer-image {
+  height: 100%;
+  width: 25%;
+  margin: 0% 2% 0% 0%;
+  border-right: 2px groove grey;
+  border-radius: 10px 0px 0px 10px;
+ }
+
+ .save-card-info-container {
+  height: 100%;
+  width: 70%;
+  text-align: center;
+ }
+
+ .save-card-name {
+  font-size: 2em;
+  margin-top: 4%;
+ }
+
+ .save-card-tagline,
+ .save-card-stats {
+  font-size: 1.5em;
+  margin-bottom: 4%;
+ }
+
+ .save-beer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  width: 40%;
+ }
+
+ .save-beer-label {
+  font-size: 1.5em;
+  margin-bottom: 2%;
+ }
+
+ .brewing-notes {
+  height: 60%;
+  width: 60%;
+  font-size: 1.3em;
+  margin-bottom: 1%;
+ }
+
+ .submit-button {
+  height: 10%;
+  width: 15%;
+  border-radius: 20px;
+  background-color: rgba(86, 212, 86);
+  transition: .2s ease-in;
+}
+
+.submit-button:hover {
+  transform: scale(1.1)
+}

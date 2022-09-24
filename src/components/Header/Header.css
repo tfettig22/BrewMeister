@@ -25,7 +25,6 @@
 .saved-beers-button {
   height: 50%;
   width: 10%;
-  /* margin-top: 3%; */
   font-size: 1.2em;
   border-radius: 20px;
   background-color: rgba(86, 212, 86);
@@ -34,5 +33,5 @@
 
 .home-button:hover,
 .saved-beers-button:hover {
-  background-color:rgba(86, 212, 86, 1);
+  transform: scale(1.1);
 }

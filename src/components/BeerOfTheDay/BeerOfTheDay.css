@@ -55,11 +55,10 @@
   width: 20%;
   margin-top: 3%;
   border-radius: 20px;
-  background-color: rgba(86, 212, 86, 0.6);
+  background-color: rgba(86, 212, 86);
   transition: .2s ease-in;
 }
 
 .botd-button:hover {
-  background-color:rgba(86, 212, 86, 1);
   transform: scale(1.1)
 }

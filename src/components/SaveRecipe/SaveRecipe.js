@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './SaveRecipe.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { postBeer } from '../../api-calls';
+import { assignImage } from '../../utility-functions/utility';
 
 const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
   const [notes, setNotes] = useState('');
@@ -29,14 +30,21 @@ const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
     }
   }, [getSelectedBeer, id]);
 
-  return (
-    <div>
-      <p>{selectedBeer.name}</p>
-      <p>{selectedBeer.tagline}</p>
-      <p>{`ABV: ${selectedBeer.abv} IBU: ${selectedBeer.ibu}`}</p>
+  assignImage(selectedBeer);
 
-      <form onSubmit={(event) => handleSubmit(event)}>
-        <label htmlFor='textarea'>Would you like to include some notes about how the brewing process went?</label>
+  return (
+    <section className='save-a-beer-section'>
+      <div className='save-beer-card'>
+        <img className='save-beer-image' src={selectedBeer.image} alt='example beer'></img>
+        <div className='save-card-info-container'>
+          <p className='save-card-name'>{selectedBeer.name}</p>
+          <p className='save-card-tagline'>{selectedBeer.tagline}</p>
+          <p className='save-card-stats'>{`ABV: ${selectedBeer.abv} IBU: ${selectedBeer.ibu}`}</p>
+        </div>
+      </div>
+
+      <form className='save-beer-form' onSubmit={(event) => handleSubmit(event)}>
+        <label className='save-beer-label' htmlFor='textarea'>Include some notes about how the brewing process went:</label>
         <textarea
           className='brewing-notes'
           id='textarea'
@@ -48,7 +56,7 @@ const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
 
         <button type='submit' className='submit-button' disabled={!notes}>Submit</button>
       </form>
-    </div>
+    </section>
   );
 }
 

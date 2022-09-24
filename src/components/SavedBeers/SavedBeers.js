@@ -21,7 +21,7 @@ const SavedBeers = () => {
   if (savedBeers.length > 0) {
     beerCards = savedBeers.map(beer => {
       return (
-        <div className='beer-card' key={beer.id}>
+        <div className='saved-beer-card' key={beer.id}>
           <p>{beer.name}</p>
           <p>{beer.tagline}</p>
           <p>{`ABV: ${beer.abv} IBU: ${beer.ibu}`}</p>
@@ -31,7 +31,7 @@ const SavedBeers = () => {
       );
     });
   } else {
-    beerCards = 'You dont have any saved beers yet, find a recipe that sounds good and give it a shot!'
+    beerCards = <p>'You dont have any saved beers yet, find a recipe that sounds good and give it a shot!'</p>
   }
 
   return (
