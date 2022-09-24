@@ -23,7 +23,7 @@ const BeerOfTheDay = ({ randomBeer, getSelectedBeer }) => {
             <p className='botd-name'>{randomBeer.name}</p>
             <p className='botd-tagline'>{randomBeer.tagline}</p>
             <p className='botd-description'>{randomBeer.description}</p>
-            <p>{`ABV: ${randomBeer.abv} IBU: ${randomBeer.ibu}`}</p>
+            <p className='botd-stats'>{`ABV: ${randomBeer.abv} IBU: ${randomBeer.ibu}`}</p>
             <button className='botd-button' onClick={() => selectABeer(randomBeer)}>Brew Me!</button>
           </div>
         </div>
@@ -31,7 +31,7 @@ const BeerOfTheDay = ({ randomBeer, getSelectedBeer }) => {
     );
   } else {
     return (
-      <p></p>
+      <section className='botd-section'></section>
     )
   }
 }
