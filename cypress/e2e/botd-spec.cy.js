@@ -28,7 +28,7 @@ describe('beer of the day, home page', () => {
     cy.get('.filter-form').should('be.visible')
     .get('.filter-type').should('be.visible')
     .get('.filter-input').should('be.visible')
-    .get('.submit-filter').should('not.be.visible')
+    .get('.submit-filter').should('not.be.visible');
   });
 
   it('should be able to select an option from the dropdown, type into the searchbar, and then the filter button should appear', () => {

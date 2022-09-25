@@ -80,7 +80,7 @@ describe('beer details page', () => {
 
   beforeEach(() => {
     cy.intercept('GET', 'https://api.punkapi.com/v2/beers/24', singleBeerStub)
-    .visit('https://brew-meister.herokuapp.com/beer-details/24')
+    .visit('https://brew-meister.herokuapp.com/beer-details/24');
   });
 
   it('should be able to visit the page and see the header, the home button, and the favorite beers button', () => {
