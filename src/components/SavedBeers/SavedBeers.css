@@ -69,3 +69,34 @@
 .brew-again-button:hover {
   transform: scale(1.1)
 }
+
+@media (max-width: 830px) {
+  .saved-beer-card {
+    width: 45%;
+    height: 50%;
+  }
+
+  .saved-beer-image {
+    width: 95%;
+  }
+
+  .saved-beer-section {
+    justify-content: center;
+  }
+
+  .saved-beer-name {
+    font-size: 1em;
+    height: auto;
+  }
+
+  .saved-beer-tagline,
+  .saved-beer-stats {
+    font-size: .7em;
+    height: auto;
+  }
+
+  .brew-again-button {
+    width: 70%;
+    font-size: .8em;
+  }
+}

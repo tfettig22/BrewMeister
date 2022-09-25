@@ -8,7 +8,7 @@
 }
 
 .botd-header {
-  font-size: 2.5em;
+  font-size: 2.3em;
   margin: 1%;
 }
 
@@ -32,9 +32,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 90%;
   width: 50%;
-  font-size: 1.1vw;
+  font-size: 1.3em;
   border: 2px groove grey;
   border-radius: 10px;
   background-color: white;
@@ -61,4 +62,20 @@
 
 .botd-button:hover {
   transform: scale(1.1)
+}
+
+@media (max-width: 580px) {
+  .botd-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .botd-info {
+    font-size: .5em;
+  }
+
+  .botd-button {
+    font-size: .6em;
+    width: 30%;
+  }
 }

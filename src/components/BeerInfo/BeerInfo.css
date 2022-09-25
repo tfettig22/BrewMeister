@@ -45,13 +45,17 @@
 }
 
 .pairing-prompt {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 2% 0% 2% 0%;
 }
 
+.food-pairing {
+  font-size: .9em;
+}
+
 .save-beer-button {
-  height: 30%;
-  width: 10%;
+  height: 35%;
+  width: 15%;
   margin: 3% 0% 0% 3%;
   border-radius: 20px;
   background-color: rgba(86, 212, 86);
@@ -159,4 +163,47 @@
   text-align: center;
   font-size: 1.2em;
   margin: 3% 6%;
+}
+
+@media (max-width: 680px) {
+  .bottom-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ingredients-container,
+  .description-and-tips-container {
+    width: 98%;
+    height: auto;
+  }
+
+  .beer-info-section {
+    overflow-y: scroll;
+  }
+
+  .pairing-prompt {
+    font-size: .8em;
+  }
+
+  .food-pairing {
+    font-size: .5em;
+  }
+
+  .ingredients-prompt {
+    width: 45%;
+  }
+
+  .malts-and-hops {
+    overflow: hidden;
+  }
+
+  .name-and-tagline {
+    width: 50%;
+    margin: 0% 3% 0% 0%;
+  }
+
+  .save-beer-button {
+    height: 40%;
+    width: 25%;
+  }
 }

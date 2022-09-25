@@ -33,7 +33,7 @@ const filteredStub = JSON.stringify(
     ibu: 1157
     }
   ]
-)
+);
 
 const singleBeerStub = JSON.stringify(
   [
@@ -111,7 +111,7 @@ const singleBeerStub = JSON.stringify(
     brewers_tips: "You'll have to get this one all the way down to -70°C. Taxidermy is not optional.",
     }
   ]
-)
+);
 
 describe('filtered beer list page', () => {
 

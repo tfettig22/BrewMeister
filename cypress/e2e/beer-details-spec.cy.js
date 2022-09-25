@@ -109,12 +109,12 @@ describe('beer details page', () => {
     .get('.hops').contains('When to add: start')
     .get('.info-description').contains('The End of History: The name derives from the famous work of philosopher')
     .get('.info-brewers-tips').contains('Brewing tips: You\'ll have to get this one all the way down to -70')
-    .get('.save-beer-button').should('be.visible')
-  })
+    .get('.save-beer-button').should('be.visible');
+  });
 
   it('should be able to click on the add to favorites button and be redirected to the save a beer page', () => {
     cy.get('.save-beer-button').click()
     .get('.save-a-beer-section').should('be.visible')
-    .get('.save-card-name').contains('The End Of History')
-  })
-})
+    .get('.save-card-name').contains('The End Of History');
+  });
+});

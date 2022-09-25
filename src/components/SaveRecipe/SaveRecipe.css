@@ -73,3 +73,25 @@
 .submit-button:hover {
   transform: scale(1.1)
 }
+
+@media (max-width: 680px) {
+  .save-beer-card {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: auto;
+  }
+
+  .save-beer-image {
+    width: 100%;
+    height: 60%;
+    margin: 0;
+    border: 0;
+    border-bottom: 2px groove grey;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .save-beer-form {
+    width: 85%;
+  }
+}

@@ -9,14 +9,11 @@
 }
 
 .label {
-  height: 30%;
-  width: 18%;
+  height: 40%;
+  width: 60%;
   margin-bottom: .2%;
   text-align: center;
-  font-size: 1vw;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid darkgreen;
+  font-size: 1.2em;
 }
 
 .select-and-input {
@@ -28,8 +25,8 @@
 
 .filter-type {
   height: 80%;
-  width: 9%;
-  font-size: .9vw;
+  width: 12%;
+  font-size: 1em;
   border-radius: 20px 0px 0px 20px;
   border: 2px solid darkgreen;
   border-right: 1px solid black;
@@ -39,7 +36,7 @@
 .filter-input {
   height: 80%;
   width: 20%;
-  font-size: .9vw;
+  font-size: 1em;
   border-radius: 0px 20px 20px 0px;
   border: 2px solid darkgreen;
   border-left: 0;
@@ -48,14 +45,39 @@
 
 .submit-button-container {
   height: 100%;
-  width: 5%;
+  width: 10%;
   margin-left: 1%;
 }
 
 .submit-filter {
   height: 80%;
   width: 100%;
-  font-size: .9vw;
+  font-size: 1em;
   border-radius: 20px;
   background-color: rgba(86, 212, 86);
+}
+
+@media (max-width: 580px) {
+  .label {
+    font-size: .6em;
+    width: 100%;
+  }
+
+  .filter-type {
+    font-size: .7em;
+    width: 30%;
+  }
+
+  .filter-input {
+    font-size: .7em;
+    width: 50%;
+  }
+
+  .submit-button-container {
+    width: 15%;
+  }
+
+  .submit-filter {
+    font-size: .7em;
+  }
 }

@@ -15,13 +15,13 @@ describe('beer of the day, home page', () => {
 
   beforeEach(() => {
     cy.intercept('GET', 'https://api.punkapi.com/v2/beers/random', randomBeerStub)
-    .visit('https://brew-meister.herokuapp.com/')
+    .visit('https://brew-meister.herokuapp.com/');
   });
 
   it('should be able to visit the page and see the header, the home button, and the favorite beers button', () => {
     cy.get('.home-button').should('be.visible')
     .get('.brewmeister').should('be.visible')
-    .get('.saved-beers-button').should('be.visible')
+    .get('.saved-beers-button').should('be.visible');
   });
 
   it('should be able to find the selection dropdown menu, the searchbar, but the filter button should be hidden until the user selects a search type and inputs a value', () => {
@@ -34,7 +34,7 @@ describe('beer of the day, home page', () => {
   it('should be able to select an option from the dropdown, type into the searchbar, and then the filter button should appear', () => {
     cy.get('.filter-type').select('ABV greater than:')
     cy.get('.filter-input').type('10')
-    cy.get('.submit-filter').should('be.visible')
+    cy.get('.submit-filter').should('be.visible');
   });
 
   it('should be able to see an image and beer details corresponding to the random "beer of the day"', () => {
@@ -45,6 +45,6 @@ describe('beer of the day, home page', () => {
     .get('.botd-tagline').contains('Hoppy Sub-Session Pale Ale.')
     .get('.botd-description').contains('Doodlebug is our fusion of low strength')
     .get('.botd-stats').contains('ABV: 2.5 IBU: 35')
-    .get('.botd-button').should('be.visible')
+    .get('.botd-button').should('be.visible');
   });
 });

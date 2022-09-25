@@ -11,9 +11,9 @@
 }
 
 .brewmeister {
-  font-size: 3em;
+  font-size: 2.7em;
   text-align: center;
-  width: 16%;
+  width: 300px;
   color: rgba(86, 212, 86);
   text-shadow: 2px 0px 3px black, 0px 2px 3px black, -2px 0px 3px black, 0px -2px 3px black;
   background-color: rgba(255, 255, 255, 0.7);
@@ -24,8 +24,8 @@
 .home-button,
 .saved-beers-button {
   height: 50%;
-  width: 10%;
-  font-size: 1.2em;
+  width: 200px;
+  font-size: 1.5em;
   border-radius: 20px;
   background-color: rgba(86, 212, 86);
   transition: .2s ease-in;
@@ -34,4 +34,17 @@
 .home-button:hover,
 .saved-beers-button:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 680px) {
+  .brewmeister {
+    font-size: 1.5em;
+    width: 150px;
+  }
+
+  .home-button,
+  .saved-beers-button {
+    font-size: .7em;
+    width: 80px;
+  }
 }
