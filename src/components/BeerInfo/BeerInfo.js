@@ -43,8 +43,9 @@ const BeerInfo = () => {
             <p className='food-pairing' key={`${pairingCounter}`}>{`${pairing}`}</p>
           );
         }));
-      });
-  }, [id]);
+      })
+      .catch(() => navigate('/error'))
+  }, [id, navigate]);
 
     return (
       <section className='beer-info-section'>

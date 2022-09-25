@@ -113,7 +113,9 @@ describe('beer details page', () => {
   });
 
   it('should be able to click on the add to favorites button and be redirected to the save a beer page', () => {
-    cy.get('.save-beer-button').click()
+    cy.intercept('GET', 'https://api.punkapi.com/v2/beers/24', singleBeerStub)
+    .wait(200)
+    .get('.save-beer-button').click()
     .get('.save-a-beer-section').should('be.visible')
     .get('.save-card-name').contains('The End Of History');
   });
