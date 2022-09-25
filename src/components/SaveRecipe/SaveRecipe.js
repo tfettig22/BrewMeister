@@ -20,7 +20,7 @@ const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
       ibu: selectedBeer.ibu,
       notes: notes
     })
-    navigate('/saved-beers');
+    setTimeout(() => navigate('/saved-beers'), 200);
   }
 
   useEffect(() => {
