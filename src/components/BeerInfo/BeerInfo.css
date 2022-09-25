@@ -182,15 +182,16 @@
   }
 
   .pairing-prompt {
-    font-size: .8em;
+    font-size: .6em;
   }
 
   .food-pairing {
-    font-size: .5em;
+    font-size: .4em;
   }
 
   .ingredients-prompt {
     width: 45%;
+    height: auto;
   }
 
   .malts-and-hops {
@@ -202,8 +203,16 @@
     margin: 0% 3% 0% 0%;
   }
 
+  .info-name {
+    font-size: 1em;
+  }
+
+  .info-tagline {
+    font-size: .8em;
+  }
+
   .save-beer-button {
-    height: 40%;
+    height: 60%;
     width: 25%;
   }
 }

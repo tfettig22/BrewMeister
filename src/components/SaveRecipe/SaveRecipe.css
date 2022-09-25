@@ -4,6 +4,7 @@
   align-items: center;
   height: 90%;
   width: 100%;
+  overflow-y: scroll;
   background-color: rgba(230, 221, 56, 0.5);
  }
 
@@ -53,6 +54,7 @@
  .save-beer-label {
   font-size: 1.5em;
   margin-bottom: 2%;
+  text-align: center;
  }
 
  .brewing-notes {
@@ -93,5 +95,10 @@
 
   .save-beer-form {
     width: 85%;
+  }
+
+  .submit-button {
+    width: 35%;
+    height: 15%;
   }
 }

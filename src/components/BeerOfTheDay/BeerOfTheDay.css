@@ -72,10 +72,16 @@
 
   .botd-info {
     font-size: .5em;
+    width: 80%;
+    margin-top: 2%;
   }
 
   .botd-button {
     font-size: .6em;
-    width: 30%;
+    width: 40%;
+  }
+
+  .botd-image {
+    width: 75%;
   }
 }
