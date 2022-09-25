@@ -195,7 +195,8 @@
   }
 
   .malts-and-hops {
-    overflow: hidden;
+    overflow: visible;
+    margin-bottom: 5%;
   }
 
   .name-and-tagline {
