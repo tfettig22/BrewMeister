@@ -29,9 +29,12 @@ const Filter = ({ filterBeer }) => {
 
   return (
     <form className='filter-form' id='filter-form' onSubmit={(event) => handleSubmit(event)}>
-      <label className='label' htmlFor='filter-form'>What kind of beer are you looking for?</label>
+      <div className='label-container'>
+        <label className='label' htmlFor='filter-type'>Filter type</label>
+        <label className='label' htmlFor='filter-input'>What kind of beer are you looking for?</label>
+      </div>
       <div className='select-and-input'>
-        <select className='filter-type' value={filterType} onChange={(event) => setFilterType(event.target.value)}>
+        <select className='filter-type' id='filter-type' value={filterType} onChange={(event) => setFilterType(event.target.value)}>
           <option value='none' hidden>Select an option</option>
           <option value='beer_name'>Name/Keyword</option>
           <option value='abv_gt'>ABV greater than:</option>
@@ -40,8 +43,10 @@ const Filter = ({ filterBeer }) => {
           <option value='ibu_lt'>IBU less than:</option>
         </select>
 
+
         <input
           className='filter-input'
+          id='filter-input'
           type='text'
           name='filterInput'
           placeholder={placeholder || ''}

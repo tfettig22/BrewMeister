@@ -8,12 +8,18 @@
   border-bottom: 1px solid black
 }
 
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-right: 10%;
+}
+
 .label {
   height: 40%;
-  width: 60%;
   margin-bottom: .2%;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .select-and-input {
@@ -79,5 +85,10 @@
 
   .submit-filter {
     font-size: .7em;
+  }
+
+  .label-container {
+    width: 90%;
+    margin-right: 25%;
   }
 }
