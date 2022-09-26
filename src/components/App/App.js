@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import './App.css';
 import Header from '../Header/Header';
 import Filter from '../Filter/Filter';

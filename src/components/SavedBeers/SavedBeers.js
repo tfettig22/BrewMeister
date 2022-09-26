@@ -12,8 +12,8 @@ const SavedBeers = () => {
     getSavedBeers().then(data => {
       setSavedBeers(data.beers);
     })
-    .catch(() => navigate('/error'))
-  }, [navigate])
+    .catch(() => setSavedBeers([]))
+  }, [])
 
   const selectABeer = (beer) => {
     navigate(`/beer-details/${beer.beerID}`);

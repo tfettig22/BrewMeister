@@ -48,7 +48,7 @@ const getSavedBeers = () => {
   return fetch('https://brew-meister-api.herokuapp.com/beers')
     .then(response => {
       if (!response.ok) {
-        throw new Error('Sorry, there was an error retrieving the beer data');
+        throw new Error('Sorry, either there is no beer data to display, or there was an error retrieving the beer data');
       }
       return response.json();
     });
