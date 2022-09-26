@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './App.css';
 import Header from '../Header/Header';
 import Filter from '../Filter/Filter';
@@ -59,24 +60,16 @@ function App() {
           </>
         }/>
         <Route path='/beer-details/:id' element={
-          <>
-            <BeerInfo />
-          </>
+          <BeerInfo />
         }/>
         <Route path='/save-this-beer/:id' element={
-          <>
-            <SaveRecipe selectedBeer={selectedBeer} getSelectedBeer={getSelectedBeer} />
-          </>
+          <SaveRecipe selectedBeer={selectedBeer} getSelectedBeer={getSelectedBeer} />
         }/>
         <Route path='/saved-beers' element={
-          <>
-            <SavedBeers />
-          </>
+          <SavedBeers />
         }/>
         <Route path='*' element={
-          <>
-            <ErrorPage />
-          </>
+          <ErrorPage />
         }/>
       </Routes>
     </div>

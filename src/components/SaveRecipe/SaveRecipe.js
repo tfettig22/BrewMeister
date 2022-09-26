@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './SaveRecipe.css';
+import PropTypes from 'prop-types';
 import { useNavigate, useParams } from 'react-router-dom';
 import { postBeer } from '../../api-calls';
 import { assignImage } from '../../utility-functions/utility';
@@ -61,3 +62,8 @@ const SaveRecipe = ({ selectedBeer, getSelectedBeer }) => {
 }
 
 export default SaveRecipe;
+
+SaveRecipe.propTypes = {
+  selectedBeer: PropTypes.object,
+  getSelectedBeer: PropTypes.func
+}

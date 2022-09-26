@@ -1,5 +1,6 @@
 import React from 'react';
 import './BeerCards.css';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { assignImage } from '../../utility-functions/utility';
 
@@ -37,5 +38,9 @@ const BeerCards = ({ beers, getSelectedBeer }) => {
   }
 }
 
-
 export default BeerCards;
+
+BeerCards.propTypes = {
+  beers: PropTypes.array,
+  getSelectedBeer: PropTypes.func
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './BeerOfTheDay.css';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { assignImage } from '../../utility-functions/utility';
 
@@ -37,3 +38,8 @@ const BeerOfTheDay = ({ randomBeer, getSelectedBeer }) => {
 }
 
 export default BeerOfTheDay;
+
+BeerOfTheDay.propTypes = {
+  randomBeer: PropTypes.object,
+  getSelectedBeer: PropTypes.func
+}

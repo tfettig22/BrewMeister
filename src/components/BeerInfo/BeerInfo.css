@@ -17,6 +17,7 @@
 .name-and-tagline{
   height: 100%;
   width: 40%;
+  line-height: 1;
   margin: 0% 10% 0% 4.5%;
   text-align: center;
   border: 2px groove grey;
@@ -27,12 +28,12 @@
 .info-name,
 .info-tagline {
   height: 50%;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .info-name{ 
-  padding-top: 3%;
-  font-size: 1.7em;
+  padding-top: 1%;
+  font-size: 1.5em;
 }
 
 .pairing-container {

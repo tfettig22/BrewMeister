@@ -12,6 +12,7 @@
   display: flex;
   height: 30%;
   width: 60%;
+  line-height: 1;
   margin: 5% 0% 3% 0%;
   border: 2px groove grey;
   border-radius: 10px;
@@ -33,13 +34,13 @@
  }
 
  .save-card-name {
-  font-size: 2em;
-  margin-top: 4%;
+  font-size: 1.8em;
+  margin: 4% 0% 2% 0%;
  }
 
  .save-card-tagline,
  .save-card-stats {
-  font-size: 1.5em;
+  font-size: 1.4em;
   margin-bottom: 4%;
  }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './Filter.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -63,3 +64,7 @@ const Filter = ({ filterBeer }) => {
 }
 
 export default Filter;
+
+Filter.propTypes = {
+  filterBeer: PropTypes.func
+}
